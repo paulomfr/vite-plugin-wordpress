@@ -27,23 +27,9 @@
     "/dist"
   ],
   "scripts": {
+    "dev": "esbuild src/index.ts --platform=node --format=esm --bundle --outfile=dist/index.js --packages=external --watch",
     "build": "rm -rf dist && pnpm run build-types && pnpm run build-plugin-esm",
-    "build-types": "tsc --emitDeclarationOnly",
+    "build-types": "tsc",
     "build-plugin-esm": "esbuild src/index.ts --platform=node --format=esm --bundle --outfile=dist/index.js --packages=external"
-  },
-  "devDependencies": {
-    "@types/node": "^25.5.0",
-    "esbuild": "^0.27.4",
-    "typescript": "^6.0.2",
-    "vite": "^8.0.0",
-    "vitest": "^4.1.2"
-  },
-  "peerDependencies": {
-    "vite": "^8.0.0"
-  },
-  "dependencies": {
-    "change-case": "^5.4.4",
-    "es-module-lexer": "^2.0.0",
-    "magic-string": "^0.30.21"
   }
 }

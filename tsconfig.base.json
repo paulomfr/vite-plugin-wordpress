@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "preserve",
+    "lib": [ "DOM", "DOM.Iterable", "ESNext" ],
+    "declaration": true,
+		"declarationMap": true,
+    "emitDeclarationOnly": true,
+
+    "skipLibCheck": true,
+
+    /* Strict Type-Checking Options */
+		"strict": true,
+
+    /* Additional Checks */
+
+    /* Module Resolution Options */
+    "moduleResolution": "bundler",
+
+    "resolveJsonModule": true,
+
+    "typeRoots": [ "./typings", "./node_modules/@types" ],
+    "types": [],
+
+    "rootDir": "${configDir}/src",
+    "declarationDir": "${configDir}/build-types",
+  },
+  "include": [ "${configDir}/src" ],
+  "exclude": [
+    "**/test/**"
+  ]
+}
