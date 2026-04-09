@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build --watch",
+    "start": "nodemon --watch ../../packages/dependency-extraction/build-module --exec \"vite build --watch\""
+  },
+  "dependencies": {
+    "@wordpress/components": "^32.5.0",
+    "@wordpress/dom-ready": "^4.43.0",
+    "@wordpress/element": "^6.43.0",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "vite-plugin-restart": "^2.0.0",
+    "vite-plugin-wordpress-dependency-extraction": "workspace:*"
+  }
+}
