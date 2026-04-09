@@ -23,10 +23,10 @@
     "typeRoots": [ "./typings", "./node_modules/@types" ],
     "types": [],
 
-    "rootDir": "${configDir}/src",
-    "declarationDir": "${configDir}/build-types",
+    "rootDir": "src",
+    "declarationDir": "build-types",
   },
-  "include": [ "${configDir}/src" ],
+  "include": [ "src" ],
   "exclude": [
     "**/test/**"
   ]

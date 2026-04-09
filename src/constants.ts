@@ -1,9 +1,18 @@
 /**
+ * WordPress external config.
+ */
+export const externalConfig = {
+  namespace: 'wordpress',
+  global: 'wp',
+  handlePrefix: 'wp',
+};
+
+/**
  * WordPress default packages vendor.
  *
  * @see https://developer.wordpress.org/reference/functions/wp_default_packages_vendor/
  */
-export const DEFAULT_PACKAGES_VENDOR: Record<
+export const defaultPackagesVendor: Record<
   string, {
     global: string;
     handle: string;
@@ -42,8 +51,3 @@ export const DEFAULT_PACKAGES_VENDOR: Record<
     handle: 'jquery',
   },
 };
-
-/**
- * The WordPress package namespace.
- */
-export const WORDPRESS_NAMESPACE = '@wordpress/';
