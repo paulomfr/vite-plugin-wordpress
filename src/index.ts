@@ -8,6 +8,7 @@ import type { Plugin } from 'vite';
  */
 import type { PluginConfig, WordPressPlugin } from './types';
 import { getPluginConfig } from './utils';
+import dependencyExtraction from './dependency-extraction';
 
 /**
  * Vite plugin for WordPress.
@@ -17,6 +18,7 @@ export default function wordpress( config: string | string[] | PluginConfig ): [
 
   return [
     wp(pluginConfig),
+    ...dependencyExtraction(),
   ];
 }
 
